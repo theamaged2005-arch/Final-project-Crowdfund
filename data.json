@@ -1,0 +1,534 @@
+[
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$qoXdHKC4VWNqtsQP0Ar35b$aIeYzVDWb2BRMNoZEFEf0dx7WFe6Q6u29qRmEKtTVXk=",
+    "last_login": "2026-09-27T03:46:43.769Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-09-25T23:15:49.769Z",
+    "email": "admin@gmail.com",
+    "phone": "",
+    "profile_picture": "",
+    "birthdate": null,
+    "facebook_profile": "",
+    "country": "",
+    "is_activated": false,
+    "created_at": "2026-09-25T23:15:51.093Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$JzALNobfVCyQdRIwDw11vk$wW01fD9Db4IkYeCiYH0iZCzBlqREID/YOElEDf1O0KI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "ahmedmaged123@gmail.com",
+    "first_name": "Ahmed",
+    "last_name": "Maged",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-25T23:55:00.872Z",
+    "email": "ahmedmaged123@gmail.com",
+    "phone": "01012345678",
+    "profile_picture": "",
+    "birthdate": null,
+    "facebook_profile": "",
+    "country": "",
+    "is_activated": false,
+    "created_at": "2026-09-25T23:55:02.292Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1500000$6BCQYlApP1Oh7U1O7Z2foy$9jCpHYLSB4fwjYcE7nvAeDDRqIAUWXux1wFa0EYzyIQ=",
+    "last_login": "2026-09-26T00:03:15.289Z",
+    "is_superuser": false,
+    "username": "test999@test.com",
+    "first_name": "Ahmed",
+    "last_name": "Maged",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-09-26T00:00:29.192Z",
+    "email": "test999@test.com",
+    "phone": "01012345678",
+    "profile_picture": "",
+    "birthdate": null,
+    "facebook_profile": "",
+    "country": "Egypt",
+    "is_activated": true,
+    "created_at": "2026-09-26T00:00:30.596Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "projects.category",
+  "pk": 1,
+  "fields": {
+    "name": "tech"
+  }
+},
+{
+  "model": "projects.category",
+  "pk": 2,
+  "fields": {
+    "name": "education"
+  }
+},
+{
+  "model": "projects.category",
+  "pk": 3,
+  "fields": {
+    "name": "health"
+  }
+},
+{
+  "model": "projects.category",
+  "pk": 4,
+  "fields": {
+    "name": "Art"
+  }
+},
+{
+  "model": "projects.category",
+  "pk": 5,
+  "fields": {
+    "name": "Charity"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 1,
+  "fields": {
+    "name": "education"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 2,
+  "fields": {
+    "name": "kids"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 3,
+  "fields": {
+    "name": "solar"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 4,
+  "fields": {
+    "name": "farming"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 5,
+  "fields": {
+    "name": "egypt"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 6,
+  "fields": {
+    "name": "sustainability"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 7,
+  "fields": {
+    "name": "health"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 8,
+  "fields": {
+    "name": "surgery"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 9,
+  "fields": {
+    "name": "elderly"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 10,
+  "fields": {
+    "name": "charity"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 11,
+  "fields": {
+    "name": "art"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 12,
+  "fields": {
+    "name": "youth"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 13,
+  "fields": {
+    "name": "culture"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 14,
+  "fields": {
+    "name": "community"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 15,
+  "fields": {
+    "name": "children"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 16,
+  "fields": {
+    "name": "winter"
+  }
+},
+{
+  "model": "projects.tag",
+  "pk": 17,
+  "fields": {
+    "name": "donation"
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 1,
+  "fields": {
+    "creator": 1,
+    "title": "Help Build a School",
+    "details": "A project to build a school in a rural area",
+    "category": 2,
+    "total_target": "100000.00",
+    "start_time": "2026-09-26T00:00:00Z",
+    "end_time": "2026-10-27T07:06:00Z",
+    "is_featured": false,
+    "is_cancelled": false,
+    "created_at": "2026-09-27T04:07:34.305Z",
+    "tags": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 2,
+  "fields": {
+    "creator": 1,
+    "title": "Solar-Powered Water Pumps for Farmers",
+    "details": "We're raising funds to install solar-powered water pumps in rural farms in Upper Egypt, helping farmers irrigate their land without relying on expensive diesel fuel. This project will directly benefit over 50 small farming families.",
+    "category": 1,
+    "total_target": "250000.00",
+    "start_time": "2026-09-26T07:49:00Z",
+    "end_time": "2026-10-27T07:49:00Z",
+    "is_featured": false,
+    "is_cancelled": false,
+    "created_at": "2026-09-27T04:51:30.024Z",
+    "tags": [
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 3,
+  "fields": {
+    "creator": 1,
+    "title": "Free Eye Surgery Camp for Elderly",
+    "details": "A medical mission to provide free cataract surgeries for elderly patients who cannot afford treatment. Our team of volunteer doctors will operate over a two-week camp in Minya, restoring sight to those in need.",
+    "category": 3,
+    "total_target": "180000.00",
+    "start_time": "2026-09-26T08:06:00Z",
+    "end_time": "2026-10-27T08:06:00Z",
+    "is_featured": true,
+    "is_cancelled": false,
+    "created_at": "2026-09-27T05:07:01.196Z",
+    "tags": [
+      7,
+      8,
+      9,
+      10
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 4,
+  "fields": {
+    "creator": 1,
+    "title": "Street Art Festival for Local Youth",
+    "details": "Supporting young, talented street artists by organizing a citywide mural festival. Funds will cover paint, equipment, artist stipends, and a public exhibition celebrating Egyptian street art culture.",
+    "category": 4,
+    "total_target": "60000.00",
+    "start_time": "2026-09-26T08:08:00Z",
+    "end_time": "2026-10-27T08:08:00Z",
+    "is_featured": false,
+    "is_cancelled": false,
+    "created_at": "2026-09-27T05:09:10.264Z",
+    "tags": [
+      11,
+      12,
+      13,
+      14
+    ]
+  }
+},
+{
+  "model": "projects.project",
+  "pk": 5,
+  "fields": {
+    "creator": 1,
+    "title": "Winter Clothes Drive for Orphanages",
+    "details": "Collecting donations to buy warm winter clothes, blankets, and shoes for children in orphanages across Cairo and Giza. Every donation directly helps a child stay warm this winter.",
+    "category": 5,
+    "total_target": "40000.00",
+    "start_time": "2026-09-26T08:09:00Z",
+    "end_time": "2026-10-27T08:09:00Z",
+    "is_featured": true,
+    "is_cancelled": false,
+    "created_at": "2026-09-27T05:12:06.732Z",
+    "tags": [
+      10,
+      15,
+      16,
+      17
+    ]
+  }
+},
+{
+  "model": "projects.projectpicture",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "image": "project_pictures/newschool.jpg"
+  }
+},
+{
+  "model": "projects.projectpicture",
+  "pk": 2,
+  "fields": {
+    "project": 2,
+    "image": "project_pictures/solarpower.png"
+  }
+},
+{
+  "model": "projects.projectpicture",
+  "pk": 3,
+  "fields": {
+    "project": 3,
+    "image": "project_pictures/eyesurgery.jpg"
+  }
+},
+{
+  "model": "projects.projectpicture",
+  "pk": 4,
+  "fields": {
+    "project": 4,
+    "image": "project_pictures/streetart.jpg"
+  }
+},
+{
+  "model": "projects.projectpicture",
+  "pk": 5,
+  "fields": {
+    "project": 5,
+    "image": "project_pictures/winterclothes.jpg"
+  }
+},
+{
+  "model": "projects.donation",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "donor": 1,
+    "amount": "5000.00",
+    "created_at": "2026-09-27T04:09:28.747Z"
+  }
+},
+{
+  "model": "projects.donation",
+  "pk": 2,
+  "fields": {
+    "project": 5,
+    "donor": 1,
+    "amount": "1200.00",
+    "created_at": "2026-09-27T05:15:20.588Z"
+  }
+},
+{
+  "model": "projects.donation",
+  "pk": 3,
+  "fields": {
+    "project": 4,
+    "donor": 1,
+    "amount": "1000.00",
+    "created_at": "2026-09-27T05:16:28.926Z"
+  }
+},
+{
+  "model": "projects.donation",
+  "pk": 4,
+  "fields": {
+    "project": 3,
+    "donor": 1,
+    "amount": "2000.00",
+    "created_at": "2026-09-27T05:17:29.091Z"
+  }
+},
+{
+  "model": "projects.donation",
+  "pk": 5,
+  "fields": {
+    "project": 2,
+    "donor": 1,
+    "amount": "800.00",
+    "created_at": "2026-09-27T05:18:08.729Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "author": 1,
+    "parent": null,
+    "body": "Great jop",
+    "created_at": "2026-09-27T04:09:55.824Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": 2,
+  "fields": {
+    "project": 5,
+    "author": 1,
+    "parent": null,
+    "body": "Keep up!!",
+    "created_at": "2026-09-27T05:15:44.937Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": 3,
+  "fields": {
+    "project": 4,
+    "author": 1,
+    "parent": null,
+    "body": "must help the artists",
+    "created_at": "2026-09-27T05:17:08.452Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": 4,
+  "fields": {
+    "project": 3,
+    "author": 1,
+    "parent": null,
+    "body": "Good work",
+    "created_at": "2026-09-27T05:17:46.851Z"
+  }
+},
+{
+  "model": "projects.comment",
+  "pk": 5,
+  "fields": {
+    "project": 2,
+    "author": 1,
+    "parent": null,
+    "body": "For the environment!",
+    "created_at": "2026-09-27T05:18:47.960Z"
+  }
+},
+{
+  "model": "projects.rating",
+  "pk": 1,
+  "fields": {
+    "project": 1,
+    "user": 1,
+    "stars": 5,
+    "created_at": "2026-09-27T04:10:20.222Z"
+  }
+},
+{
+  "model": "projects.rating",
+  "pk": 2,
+  "fields": {
+    "project": 5,
+    "user": 1,
+    "stars": 5,
+    "created_at": "2026-09-27T05:15:13.103Z"
+  }
+},
+{
+  "model": "projects.rating",
+  "pk": 3,
+  "fields": {
+    "project": 4,
+    "user": 1,
+    "stars": 4,
+    "created_at": "2026-09-27T05:16:33.273Z"
+  }
+},
+{
+  "model": "projects.rating",
+  "pk": 4,
+  "fields": {
+    "project": 3,
+    "user": 1,
+    "stars": 5,
+    "created_at": "2026-09-27T05:17:22.247Z"
+  }
+},
+{
+  "model": "projects.rating",
+  "pk": 5,
+  "fields": {
+    "project": 2,
+    "user": 1,
+    "stars": 3,
+    "created_at": "2026-09-27T05:17:59.912Z"
+  }
+}
+]
