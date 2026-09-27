@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Start a Project{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <h3>Start a fundraising campaign</h3>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Create Project</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

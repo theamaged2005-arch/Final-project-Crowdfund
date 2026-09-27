@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Crowdfund EG - Home{% endblock %}
+{% block content %}
+
+{% if top_rated %}
+<div id="topRatedCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for project in top_rated %}
+      <div class="carousel-item {% if forloop.first %}active{% endif %}">
+        <div class="card">
+          {% if project.first_picture %}
+            <img src="{{ project.first_picture.image.url }}" style="height:220px; object-fit:cover;">
+          {% endif %}
+          <div class="card-body text-center">
+            <h4><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></h4>
+            <p>{{ project.details|truncatewords:20 }}</p>
+            <p><strong>Rating:</strong> {{ project.avg_rating|floatformat:1 }} / 5</p>
+            <p class="small mb-1">{{ project.total_donated }} / {{ project.total_target }} EGP</p>
+            <div class="progress mx-auto" style="height: 8px; max-width: 300px;">
+              <div class="progress-bar" style="width: {{ project.progress_percent }}%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#topRatedCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#topRatedCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+{% endif %}
+
+<div class="row">
+  <div class="col-md-8">
+    <h4>Latest Projects</h4>
+    <div class="row mb-4">
+      {% for project in latest_projects %}
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            {% if project.first_picture %}
+              <img src="{{ project.first_picture.image.url }}" class="card-img-top" style="height:140px; object-fit:cover;">
+            {% endif %}
+            <div class="card-body">
+              <h6><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></h6>
+              <p class="small text-muted">{{ project.details|truncatewords:12 }}</p>
+              <p class="small mb-1">{{ project.total_donated }} / {{ project.total_target }} EGP</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" style="width: {{ project.progress_percent }}%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p>No projects yet. <a href="{% url 'projects:create' %}">Start one!</a></p>
+      {% endfor %}
+    </div>
+
+    {% if featured_projects %}
+    <h4>Featured Projects</h4>
+    <div class="row mb-4">
+      {% for project in featured_projects %}
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 border-warning">
+            {% if project.first_picture %}
+              <img src="{{ project.first_picture.image.url }}" class="card-img-top" style="height:140px; object-fit:cover;">
+            {% endif %}
+             <div class="card-body">
+              <h6><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></h6>
+              <p class="small text-muted">{{ project.details|truncatewords:12 }}</p>
+              <p class="small mb-1">{{ project.total_donated }} / {{ project.total_target }} EGP</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar bg-warning" style="width: {{ project.progress_percent }}%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="col-md-4">
+    <h4>Categories</h4>
+    <div class="list-group">
+      {% for category in categories %}
+        <a href="{% url 'projects:category' category.pk %}" class="list-group-item list-group-item-action">
+          {{ category.name }}
+        </a>
+      {% empty %}
+        <p>No categories yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

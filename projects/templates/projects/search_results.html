@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+<h3>Search results for "{{ query }}"</h3>
+<div class="row">
+  {% for project in results %}
+    <div class="col-md-3 mb-3">
+      <div class="card h-100">
+        {% if project.first_picture %}
+          <img src="{{ project.first_picture.image.url }}" class="card-img-top" style="height:140px; object-fit:cover;">
+        {% endif %}
+        <div class="card-body">
+          <h6><a href="{% url 'projects:detail' project.pk %}">{{ project.title }}</a></h6>
+        </div>
+      </div>
+    </div>
+  {% empty %}
+    <p>No projects found.</p>
+  {% endfor %}
+</div>
+{% endblock %}
