@@ -143,14 +143,31 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'Crowdfund EG <noreply@crowdfund.local>'
+from decouple import config
+
+if 'PYTHONANYWHERE_DOMAIN' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+    EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+    DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'Crowdfund EG <noreply@crowdfund.local>'
+
 
 # مدة صلاحية لينك التفعيل بالساعات
 ACTIVATION_LINK_EXPIRY_HOURS = 24
 
 # دومين الموقع (هنستخدمه في بناء اللينكات جوه الإيميلات)
-SITE_DOMAIN = '127.0.0.1:8000'
-SITE_PROTOCOL = 'http'
+if 'PYTHONANYWHERE_DOMAIN' in os.environ:
+    SITE_DOMAIN = 'a7medmaged.pythonanywhere.com'
+    SITE_PROTOCOL = 'https'
+else:
+    SITE_DOMAIN = '127.0.0.1:8000'
+    SITE_PROTOCOL = 'http'
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
